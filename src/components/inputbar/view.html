@@ -1,0 +1,8 @@
+<template>
+	<form submit.delegate="submit()">
+		<input type="text" placeholder="name your city" value.bind="city" />
+		<button type="submit">submit</button>
+	</form>
+	<require from="../mainbody/component"></require>
+	<main-body city.bind="state.city"></main-body>
+</template>

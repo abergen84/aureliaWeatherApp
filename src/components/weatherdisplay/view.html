@@ -1,0 +1,20 @@
+<template>
+	<navbar></navbar>
+		<form submit.delegate="get()">
+			<input type="text" placeholder="name your city" value.bind="city" />
+			<button type="submit">submit</button>
+		</form>
+
+		<div if.bind="data.weather">
+			<div>
+				<h2>Current snapshot</h2>
+				<p>${data.weather.currently.summary}</p>	
+				<p>${data.weather.currently.temperature} degrees F</p>
+				<p>${data.weather.currently.humidity}% humidity</p>
+			</div>
+			<div>
+				<h2>Short term forecast</h2>
+				<p>${data.weather.daily.summary}</p>
+			</div>
+		</div>
+</template>
